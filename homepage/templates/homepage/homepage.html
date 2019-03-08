@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>The Big Picture - Start Bootstrap Template</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage/main.css' %}">
+
+
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-bottom">
+            <div class="container">
+            <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Zef Wolffs</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="{% url 'blog-home' %}">Blog</a>
+                <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+                </div>
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="{% url 'post-create' %}">Contact</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+  <!-- Page Content -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="mt-5">The Big Picture</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptates rerum eveniet sapiente repellat esse, doloremque quod recusandae deleniti nostrum assumenda vel beatae sed aut modi nesciunt porro quisquam voluptatem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
