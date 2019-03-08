@@ -3,7 +3,11 @@
     <article class="media content-section">
         <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2" href="#">{{ object.author }}</a>
+            <h2 class="article-title">{{ object.title }}</h2>
+            <p class="lead">
+                By
+                <a href="#">{{ object.author }}</a>
+            </p>
             <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
             {% if object.author == user %}
                 <div>
@@ -12,7 +16,9 @@
                 </div>
             {% endif %}
         </div>
-        <h2 class="article-title">{{ object.title }}</h2>
+            {% if object.image %}
+                <img class="img-fluid rounded" src="{{ object.image.url }}" alt="">
+            {% endif %}
         <p class="article-content">{{ object.content }}</p>
         </div>
     </article>
