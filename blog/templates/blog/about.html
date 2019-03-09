@@ -1,4 +1,211 @@
-{% extends "blog/base.html" %}
-{% block content %}
-    
-{% endblock content%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Zef's About</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'blog/about/vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'blog/about/css/scrolling-nav.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-steel fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="{% url 'homepage' %}">Zef's About</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link" href="{% url 'blog-about' %}">Home</a>
+        <a class="nav-item nav-link" href="{% url 'blog-home' %}">Blog</a>
+        </div>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#personal">Personal Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#employment">Employment History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#extracurricular">Extracurricular Activities</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Zef Wolffs</h1>
+      <p class="lead">A Digital Resume</p>
+    </div>
+  </header>
+
+  <section id="personal">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Personal Introduction</h2>
+          <p class="lead">I am hard working, eager to learn, communicatively strong, and always open for
+            new opportunities. People I have worked with in the past have told me that they
+            appreciate me because of my proactive and socially engaged attitude. During
+            my physics education and industry career I developed my analytical thinking
+            and approach to problem solving, as well as more practical skills such as
+            programming and modelling. I'm flexible and motivated to apply my skills
+            with a broad perspective.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="employment" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Employment History</h2>
+            <dl>
+            <dt>Software Analyst at WeCash, Heerlen. (September 2018 – February 2019)</dt>
+            <dd><p class="lead">
+              At WeCash I worked in the R&D branch XLab BV where I took an analytical
+                approach at developing financial technology (FinTech) software. Also I worked
+                to generate a fruitful relationship with University Maastricht (UM). This included
+                making WeCash more approachable for students.
+            </dd></p>
+            <dt>Teacher of Science and Technology at Stichting Amalied, Sittard. (September 2017 – Present)</dt>
+            <dd><p class="lead">
+              I currently work for Stichting Amalied where I give and design workshops related
+                to science and technology. My engagement in these fields allows me to make the
+                workshops exciting and useful.
+            </dd></p>
+            <dt>Software Developer at the Natural History Museum Maastricht (NHMM), Maastricht. (June 2017 – August 2017)</dt>
+            <dd><p class="lead">
+              Together with another student I developed a prototype app for the NHMM. This project was on freelance basis. The goal was to make the NHMM more
+                interactive. To this end we created both interactive augmented and virtual
+                reality apps. Visitors had graded these apps respectively 4.6 and 4.8 out of 5. Due
+                to the success of this project we were invited to present it to the major of
+                Maastricht and the dean of Maastricht University
+            </dd></p>
+            <dt>Administrative Assistant at Fortuna Sittard, Sittard. (January 2014 – May 2014)</dt>
+            <dd><p class="lead">
+              I worked at Fortuna Sittard, a local football team in the highest division of the
+                Netherlands, for a short period of time. My job was primarily to assist in
+                administrative tasks
+            </dd></p>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Education</h2>
+          <dl>
+              <dt>Liberal Arts and Sciences, Maastricht University, Maastricht. (September 2016 – Present)</dt>
+              <dd><p class="lead">
+                I am currently studying physics in the third year of my Liberal Arts and Sciences degree at
+                  Maastricht University. Outside of physics I tend to focus on math and programming.
+              </dd></p>
+              <dt>Natuur en Techniek + Natuur en Gezondheid - VWO Gymnasium,
+                  Trevianum scholengroep Gymnasium, Sittard. (September 2011 – June 2016)</dt>
+              <dd><p class="lead">
+                  In my high school education I followed two tracks simultaneosly at the highest
+                  level of education available in the Netherlands. This allowed me to focus
+                  strongly on math and the other sciences. As extra courses I took philosophy and
+                  Latin.
+              </dd></p>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="extracurricular" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Extracurricular Activies</h2>
+            <dl>
+                <dt>IBM Q-challenge. (January 2019 – Present)</dt>
+                <dd><p class="lead">
+                  Together with a group of one professor and three students I participate in the
+                  IBM Q-challenge. This is a competitive challenge in which a lecture series in
+                  quantum computing is followed by a project in quantum computing. The team
+                  that engineers the best solution to a problem using quantum computing wins. 
+                </dd></p>
+                <dt>International Data Analysis Olympiad (IDAO). (January 2019 - February 2019)</dt>
+                <dd><p class="lead">
+                  Together with a professor and a student I participate in the IDAO. The goal of this
+                  olympiad is to create a Machine Learning (ML) algorithm that can handle track
+                  reconstruction in very high multiplicity environments. We are currently
+                  researching the applicability of novel machine learning models, as opposed to
+                  contemporary algorithms that are used in track reconstruction such as Kalman
+                  filters.
+                </dd></p>
+                <dt>BrightHack Hackathon. (November 2018 - November 2018)</dt>
+                <dd><p class="lead">
+                  At the BrightHack hackathon I worked in a small team to develop soȅware that
+                  would streamline communications between police officers in the field and the
+                  criminal investigation department. This project included mainly natural
+                  language processing programming activities in python and MATLAB.
+                </dd></p>
+                <dt>Simulating heat development in microfluidic chips using Computer
+                  aided design (CAD). (June 2018 - July 2018)</dt>
+                <dd><p class="lead">
+                  Together with a group of four students I developed optimal microfluidic chip
+                  parameters in Fusion360, a CAD programme. This was done to aid a PhD student
+                  in his research.
+                </dd></p>
+                <dt>Engineering a genetic algorithm based on larval chemotaxis. (January 2018 - February 2018)</dt>
+                <dd><p class="lead">
+                  Together with a group of five students I developed a genetic algotithm based on
+                  the chemotactic behaviour of larvae. I mainly worked in developing the genetic
+                  algorithm itself in MATLAB (and thus not so much in working out the biology).
+                </dd></p>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Zef Wolffs 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
