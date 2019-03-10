@@ -7,7 +7,7 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
-from .models import Post
+from .models import Post, PostImage
 # Create your views here.
 
 ### Old function version of home page ###
@@ -26,6 +26,13 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
+
+ #   def get_context_data(self, **kwargs):
+ #       context = super(PostDetailView, self).get_context_data(**kwargs)
+ #       context.update({
+ #           'images': ImagePost.objects.all(),
+ #       })
+ #       return context
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
