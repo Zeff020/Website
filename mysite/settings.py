@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'polls.apps.PollsConfig',
+    'quantumdiagrams.apps.QuantumdiagramsConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
