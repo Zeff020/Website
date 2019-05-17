@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('responsible-eramet', include('responsible.urls')),
+    path('thegreenprint/', include('responsible.urls')),
     path('', include('homepage.urls')),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
