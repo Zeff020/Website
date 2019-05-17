@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost','www.zefwolffs.com','142.93.238.105']
 # Application definition
 
 INSTALLED_APPS = [
+    'responsible.apps.ResponsibleConfig',
     'homepage.apps.HomepageConfig',
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
