@@ -6,44 +6,42 @@
 <div class="container">
     <h2></h2>
     <p></p> 
-    <img src="{% static 'images/GREENMAP_0.jpg' %}" class="mx-auto d-block" style="width:100%"> 
 </div> 
-<button type="submit" class="save btn btn-default">Save</button> 
 <div class="container">
-    <h2>Material Processing History. The total CSR value of your</h2>         
+    <h2>Material Processing History.</h2>         
     <table class="table">
         <thead>
         <tr>
             <th>Location</th>
             <th>Activity</th>
             <th>Time</th>
-            <th>CSR Value</th>
+            <th>Green Points</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>France</td>
+            <td>United States</td>
             <td>Product was handed over to the customer.</td>
             <td>17:00, 15-4-2019.</td>
-            <td><a href=#>1</a></td>
+            <td><a href=#>3.0</a></td>
         </tr>
         <tr>
             <td>Madrid</td>
             <td>Materials were smelted into product and sent to customer by truck.</td>
             <td>12:00, 13-4-2019.</td>
-            <td><a href=#>0.7</a></td>
+            <td><a href=#>8.5</a></td>
         </tr>
         <tr>
             <td>Morocco</td>
             <td>Material was loaded onto ships to be sent to Madrid.</td>
             <td>13:00, 9-4-2019.</td>
-            <td><a href=#>0.9</a></td>
+            <td><a href=#>7.0</a></td>
         </tr>
         <tr>
             <td>Gabon</td>
             <td>Material was mined, loaded onto trucks to be transported to Morocco.</td>
             <td>09:00, 4-4-2019.</td>
-            <td><a href=#>1.1</a></td>
+            <td><a href=#>6.2</a></td>
         </tr>
         </tbody>
     </table>
@@ -52,4 +50,15 @@
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
     </form>
+
+<script>
+function showPicture() {
+  var sourceOfPicture = "http://img.tesco.com/Groceries/pi/118/5000175411118/IDShot_90x90.jpg";
+  var img = document.getElementById('bigpic')
+  img.src = sourceOfPicture.replace('90x90', '225x225');
+  img.style.display = "block";
+} 
+</script>
+
+
 {% endblock content %}
