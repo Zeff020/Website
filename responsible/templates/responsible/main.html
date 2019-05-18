@@ -2,16 +2,54 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
+
 <div class="container">
     <h2></h2>
     <p></p> 
-    <img src="{% static 'images/StockMap.jpg' %}" class="mx-auto d-block" style="width:80%"> 
-</div>  
-
-    <h2>Update Materials Information</h2>
+    <img src="{% static 'images/GREENMAP_0.jpg' %}" class="mx-auto d-block" style="width:100%"> 
+</div> 
+<button type="submit" class="save btn btn-default">Save</button> 
+<div class="container">
+    <h2>Material Processing History. The total CSR value of your</h2>         
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Location</th>
+            <th>Activity</th>
+            <th>Time</th>
+            <th>CSR Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>France</td>
+            <td>Product was handed over to the customer.</td>
+            <td>17:00, 15-4-2019.</td>
+            <td><a href=#>1</a></td>
+        </tr>
+        <tr>
+            <td>Madrid</td>
+            <td>Materials were smelted into product and sent to customer by truck.</td>
+            <td>12:00, 13-4-2019.</td>
+            <td><a href=#>0.7</a></td>
+        </tr>
+        <tr>
+            <td>Morocco</td>
+            <td>Material was loaded onto ships to be sent to Madrid.</td>
+            <td>13:00, 9-4-2019.</td>
+            <td><a href=#>0.9</a></td>
+        </tr>
+        <tr>
+            <td>Gabon</td>
+            <td>Material was mined, loaded onto trucks to be transported to Morocco.</td>
+            <td>09:00, 4-4-2019.</td>
+            <td><a href=#>1.1</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+    <h2>Update Material Information</h2>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
     </form>
-
 {% endblock content %}
