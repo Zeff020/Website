@@ -25,7 +25,7 @@ SECRET_KEY = r'f@1ckana64=254_0&0#rw!rs^_x-k$!!l%szio6@s2c(!2uc1g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','www.zefwolffs.com','142.93.238.105', '188.166.17.19']
+ALLOWED_HOSTS = ['localhost','www.zefwolffs.com','142.93.238.105', '188.166.17.19', '127.0.0.1', 'mysite.herokuapp.com', 'https://zef-website.herokuapp.com/']
 
 
 # Application definition
